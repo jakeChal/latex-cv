@@ -1,18 +1,16 @@
-# arasgungore-CV
+# latex-cv
 
-My curriculum vitae (CV) written using LaTeX. In my CV, you may find my contact information, websites, education, experience, achievements, projects, and skills.
-
-Please find attached my [CV](https://drive.google.com/file/d/1TGwMpZl6FDeQk1w_-EetbspCuzu16kCF/view?usp=sharing). 😜
-
-
-
-## Run on Terminal
-
+## Setup
+You don't need to install LaTeX locally; you can render your CV via a docker container. 
+To build the docker image:
 ```sh
-pdflatex main.tex
+docker build . -t pdflatex
 ```
 
-
+## Build
+```sh
+docker run -v $(pwd):/usr/src/app pdflatex:latest main.tex
+```
 
 ## Screenshots
 
@@ -22,10 +20,3 @@ pdflatex main.tex
 </p>
 
 
-
-## Author
-
-👤 **Aras Güngöre**
-
-* LinkedIn: [@arasgungore](https://www.linkedin.com/in/arasgungore)
-* GitHub: [@arasgungore](https://github.com/arasgungore)
